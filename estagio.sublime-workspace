@@ -1,0 +1,364 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"usersModel"
+			],
+			[
+				"Docs",
+				"docsController"
+			],
+			[
+				"return",
+				"returnJobUser"
+			],
+			[
+				"iNFO",
+				"Info"
+			],
+			[
+				"In",
+				"InfoController"
+			],
+			[
+				"is",
+				"issed"
+			],
+			[
+				"fu",
+				"fun\tfunction …"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"sess",
+				"session_destroy"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"for",
+				"footer\tTag"
+			],
+			[
+				"f",
+				"for\tfor …"
+			],
+			[
+				"co",
+				"code\tTag"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"box-",
+				"box-sizing"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"te",
+				"tell"
+			],
+			[
+				"t",
+				"type\tAttr"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"auto",
+				"autofocus\tAttr"
+			],
+			[
+				"ti",
+				"title\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 341.0,
+		"last_filter": "set syntax:html",
+		"selected_items":
+		[
+			[
+				"set syntax:html",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/www/estagio",
+		"/www/estagio/public"
+	],
+	"file_history":
+	[
+		"/www/estagio/public/ContaBanco.php",
+		"/www/estagio/public/GerenciamentoContas.php",
+		"/www/estagio/public/conexao.php",
+		"/www/estagio/public/gerente.php",
+		"/www/estagio/public/banco.php",
+		"/www/project/app/modules/users/models/Docs.php",
+		"/www/project/app/modules/users/controllers/InfoController.php",
+		"/www/project/app/modules/users/controllers/DocsController.php",
+		"/www/estagio/public/index2.php",
+		"/www/estagio/public/register.php",
+		"/www/estagio/public/phpoo.php",
+		"/www/project/app/modules/users/controllers/JobsController.php",
+		"/www/project/app/modules/users/models/Jobs.php",
+		"/www/project/app/modules/users/models/Users.php",
+		"/www/project/app/modules/users/models/Info.php",
+		"/www/project/app/modules/users/controllers/UsersController.php",
+		"/www/project/app/traits/Sql.php",
+		"/www/project/app/models/BaseModel.php",
+		"/www/estagio/public/index.php",
+		"/www/project/public/routes/collections/Docs.php",
+		"/www/project/public/routes/collections/Info.php",
+		"/www/project/public/routes/collections/Jobs.php",
+		"/www/project/public/routes/collections/Users.php",
+		"/www/project/public/routes/collections/Phones.php",
+		"/www/project/composer",
+		"/www/as-capacita-phalcon-api/app/modules/users/controllers/PhonesController.php",
+		"/www/project/app/configs/.env",
+		"/www/as-capacita-phalcon-api/app/configs/.env",
+		"/www/as-capacita-phalcon-api/public/index.php",
+		"/home/softers/Eder/first-steps/main.js",
+		"/home/softers/Eder/first-steps/js.html",
+		"/home/softers/Eder/first-steps/style.css",
+		"/home/softers/Eder/first-steps/index.html",
+		"/home/softers/Eder/first-steps/figuras.html",
+		"/home/softers/Eder/first-steps/stylecss"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"else",
+			"getid",
+			"public",
+			"set",
+			"::",
+			"\n    /**\n     * @Column(type=\"integer\", length=16, nullable=false)\n     */\n    public $rg;",
+			"')\n",
+			"job",
+			"')\n",
+			"infoId",
+			"<",
+			"'<'",
+			"$job",
+			"job",
+			"phone",
+			"sPhone",
+			"Phone",
+			"iUserId",
+			"iPhoneId",
+			"phone",
+			"iPhoneId",
+			"phones",
+			"Phones",
+			"phones",
+			"Phones",
+			"?>",
+			"<?php",
+			">\t"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "estagio.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/www/project/as-capacita-phalcon-api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
