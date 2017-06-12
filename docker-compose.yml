@@ -27,6 +27,7 @@ services:
             - ./:/www/as-capacita-phalcon-api
             - ./docker/php7/php-fpm.conf:/etc/php/7.0/fpm/pool.d/www.conf
             - /tmp:/tmp
+            - ./../frontend:/www/frontend
     mariadb:
         image: mariadb:10.1.18
         environment:

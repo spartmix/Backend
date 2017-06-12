@@ -13,9 +13,17 @@ class ClientesController extends RESTController
             $query->addFrom('\App\Bancos\Models\Clientes', 'Clientes')
             ->columns(
                 [
-                    'Clientes.*'
+                    'Clientes.idCliente',
+                    'Clientes.nomeCliente',
+                    'Clientes.numeroConta',
+                    'Clientes.tipoConta',
+                    'Contas.idConta',
+                    'Contas.cNumeroConta',
+                    'Contas.saldoConta',
+                    'Contas.limiteConta',
                 ]
             )
+            ->leftJoin('\App\Bancos\Models\Contas', 'Clientes.numeroConta = Contas.cNumeroConta', 'Contas')
             ->where('true' . $this->getConditions());
 
             return $query
@@ -48,8 +56,15 @@ class ClientesController extends RESTController
             $cliente->setNomeCliente($this->di->get('request')->getPost('nomeCliente'))
             ->setNumeroConta($this->di->get('request')->getPost('numeroConta'))
             ->setTipoConta($this->di->get('request')->getPost('tipoConta'));
-
             $cliente->saveDB();
+
+
+            // $contasController = new contasController();
+            // $returnInfoContas = $contasController->addContasController($this->di->get('request')->getPost('cNumeroConta'),
+            //     $this->di->get('request')->getPost('saldoConta'),
+            //     $this->di->get('request')->getPost('limiteConta'),
+            //     $cliente->getNumeroConta()
+            // );
 
             return $cliente;
         } catch (\Exception $e) {

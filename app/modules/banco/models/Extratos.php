@@ -1,31 +1,32 @@
-<?php
-namespace App\Bancos\Models;
+<!-- <?php
+// namespace App\Bancos\Models;
 
-class Extratos extends \App\Models\BaseModel
+// class Extratos extends \App\Models\BaseModel
 {
-    protected $idExtrato;
+    // protected $idExtrato;
 
-    protected $numeroConta;
+    // protected $numeroConta;
 
-    public function getIdExtrato()
+    // public function getIdExtrato()
     {
-        return $this->idExtrato;
+        // return $this->idExtrato;
     }
 
-    public function setIdExtrato($idExtrato)
+    // public function setIdExtrato($idExtrato)
     {
-        $this->idExtrato = $idExtrato;
-        return $this->idExtrato;
+        // $this->idExtrato = $idExtrato;
+        // return $this->idExtrato;
     }
 
-    public function getNumeroConta()
+    // public function getNumeroConta()
     {
-        return $this->numeroConta;
+        // return $this->numeroConta;
     }
 
-    public function setNumeroConta($setNumeroConta)
+    // public function setNumeroConta($setNumeroConta)
     {
-        $this->setNumeroConta = $setNumeroConta;
-        return $this->numeroConta;
+        // $this->setNumeroConta = $setNumeroConta;
+        // return $this->numeroConta;
     }
 }
+ // -->

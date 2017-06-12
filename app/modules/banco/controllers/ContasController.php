@@ -51,7 +51,7 @@ class ContasController extends RESTController
                 throw new Exception("Error Processing Request", 1);
             }
 
-            $conta->setNumeroConta($this->di->get('request')->getPut('numeroConta'))
+            $conta->setcNumeroConta($this->di->get('request')->getPut('cNumeroConta'))
             ->setSaldoConta($this->di->get('request')->getPut('saldoConta'))
             ->setLimiteConta($this->di->get('request')->getPut('limiteConta'));
 
@@ -67,7 +67,7 @@ class ContasController extends RESTController
     {
         try {
             $conta = new Contas();
-            $conta->setNumeroConta($this->di->get('request')->getPost('numeroConta'))
+            $conta->setcNumeroConta($this->di->get('request')->getPost('cNumeroConta'))
             ->setSaldoConta($this->di->get('request')->getPost('saldoConta'))
             ->setLimiteConta($this->di->get('request')->getPost('limiteConta'));
             $conta->saveDB();
@@ -77,6 +77,23 @@ class ContasController extends RESTController
             throw new \Exception($e->getMessage(), $e->getCode());
         }
     }
+
+    // public function addContasController($cNumeroConta, $saldoConta, $limiteConta)
+    // {
+    //     try {
+    //         $conta = new Contas();
+
+    //         $conta->setcNumeroConta($cNumeroConta)
+    //         ->setSaldoConta($saldoConta)
+    //         ->setLimiteConta($limiteConta);
+    //         $conta->saveDB();
+
+
+    //         return $conta;
+    //     } catch (\Exception $e) {
+    //         throw new \Exception($e->getMessage(), $e->getCode());
+    //     }
+    // }
 
     public function deleteConta($idConta)
     {

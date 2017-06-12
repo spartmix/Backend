@@ -5,7 +5,7 @@ class Contas extends \App\Models\BaseModel
 {
     protected $idConta;
 
-    protected $numeroConta;
+    protected $cNumeroConta;
 
     protected $saldoConta;
 
@@ -22,17 +22,17 @@ class Contas extends \App\Models\BaseModel
         return $this;
     }
 
-    public function getNumeroConta()
+    public function getcNumeroConta()
     {
-        return $this->numeroConta;
+        return $this->cNumeroConta;
     }
 
-    public function setNumeroConta($setNumeroConta)
+    public function setcNumeroConta($setNumeroConta)
     {
         if (null === $setNumeroConta) {
             return $this;
         }
-        $this->numeroConta = $setNumeroConta;
+        $this->cNumeroConta = $setNumeroConta;
         return $this;
     }
 
