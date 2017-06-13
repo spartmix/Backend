@@ -78,23 +78,6 @@ class ContasController extends RESTController
         }
     }
 
-    // public function addContasController($cNumeroConta, $saldoConta, $limiteConta)
-    // {
-    //     try {
-    //         $conta = new Contas();
-
-    //         $conta->setcNumeroConta($cNumeroConta)
-    //         ->setSaldoConta($saldoConta)
-    //         ->setLimiteConta($limiteConta);
-    //         $conta->saveDB();
-
-
-    //         return $conta;
-    //     } catch (\Exception $e) {
-    //         throw new \Exception($e->getMessage(), $e->getCode());
-    //     }
-    // }
-
     public function deleteConta($idConta)
     {
         try {

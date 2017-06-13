@@ -187,7 +187,7 @@
 			"file": "app/modules/banco/controllers/ClientesController.php",
 			"settings":
 			{
-				"buffer_size": 3705,
+				"buffer_size": 3682,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -196,7 +196,8 @@
 			"file": "app/modules/banco/controllers/ContasController.php",
 			"settings":
 			{
-				"buffer_size": 3238,
+				"buffer_size": 3277,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -241,10 +242,12 @@
 		"/www/project3/app",
 		"/www/project3/app/modules",
 		"/www/project3/app/modules/banco",
-		"/www/project3/app/modules/banco/controllers"
+		"/www/project3/app/modules/banco/controllers",
+		"/www/project3/app/modules/banco/models"
 	],
 	"file_history":
 	[
+		"/www/project3/app/modules/banco/models/Extratos.php",
 		"/www/project3/app/modules/banco/controllers/ContasController.php",
 		"/www/project3/docker-compose.yml",
 		"/www/project3/app/modules/banco/controllers/ClientesController.php",
@@ -368,7 +371,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -377,15 +380,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3705,
+						"buffer_size": 3682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1960,
-								1960
+								2332,
+								2332
 							]
 						],
 						"settings":
@@ -395,27 +398,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 462.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "app/modules/banco/controllers/ContasController.php",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3238,
+						"buffer_size": 3277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1905,
-								1905
+								2378,
+								2378
 							]
 						],
 						"settings":
@@ -425,10 +428,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 910.0,
+						"translation.y": 420.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

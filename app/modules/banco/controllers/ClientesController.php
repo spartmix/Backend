@@ -58,14 +58,6 @@ class ClientesController extends RESTController
             ->setTipoConta($this->di->get('request')->getPost('tipoConta'));
             $cliente->saveDB();
 
-
-            // $contasController = new contasController();
-            // $returnInfoContas = $contasController->addContasController($this->di->get('request')->getPost('cNumeroConta'),
-            //     $this->di->get('request')->getPost('saldoConta'),
-            //     $this->di->get('request')->getPost('limiteConta'),
-            //     $cliente->getNumeroConta()
-            // );
-
             return $cliente;
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode());
@@ -102,6 +94,8 @@ class ClientesController extends RESTController
             if (false === $cliente) {
                 throw new Exception("Esse id não existe", 2);
             }
+            var_dump($cliente);
+            die();
             return ['sucesso' => $cliente->delete()];
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode());
