@@ -3,6 +3,7 @@ namespace App\Bancos\Controllers;
 
 use App\Controllers\RESTController;
 use App\Bancos\Models\Clientes;
+use App\Bancos\Models\Contas;
 
 class ClientesController extends RESTController
 {
@@ -94,8 +95,12 @@ class ClientesController extends RESTController
             if (false === $cliente) {
                 throw new Exception("Esse id não existe", 2);
             }
-            var_dump($cliente);
-            die();
+
+            $conta = (new Contas())->findFirst('cNumeroConta = ' . $cliente->numeroConta);
+            if (false != $conta) {
+                $conta->delete();
+            }
+
             return ['sucesso' => $cliente->delete()];
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode());

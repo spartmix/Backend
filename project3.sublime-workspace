@@ -5,7 +5,7 @@
 		[
 			[
 				"return",
-				"returnInfoContas"
+				"returnContas"
 			],
 			[
 				"saldo",
@@ -187,17 +187,16 @@
 			"file": "app/modules/banco/controllers/ClientesController.php",
 			"settings":
 			{
-				"buffer_size": 3682,
+				"buffer_size": 3498,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/modules/banco/controllers/ContasController.php",
+			"file": "public/routes/collections/Contas.php",
 			"settings":
 			{
-				"buffer_size": 3277,
-				"encoding": "UTF-8",
+				"buffer_size": 609,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,15 +239,17 @@
 	[
 		"/www/project3",
 		"/www/project3/app",
-		"/www/project3/app/modules",
 		"/www/project3/app/modules/banco",
 		"/www/project3/app/modules/banco/controllers",
-		"/www/project3/app/modules/banco/models"
+		"/www/project3/app/modules/banco/models",
+		"/www/project3/public",
+		"/www/project3/public/routes",
+		"/www/project3/public/routes/collections"
 	],
 	"file_history":
 	[
-		"/www/project3/app/modules/banco/models/Extratos.php",
 		"/www/project3/app/modules/banco/controllers/ContasController.php",
+		"/www/project3/app/modules/banco/models/Extratos.php",
 		"/www/project3/docker-compose.yml",
 		"/www/project3/app/modules/banco/controllers/ClientesController.php",
 		"/www/project3/app/modules/users/controllers/UsersController.php",
@@ -380,15 +381,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3682,
+						"buffer_size": 3498,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2332,
-								2332
+								861,
+								861
 							]
 						],
 						"settings":
@@ -398,7 +399,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 462.0,
+						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -406,19 +407,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/modules/banco/controllers/ContasController.php",
-					"semi_transient": false,
+					"file": "public/routes/collections/Contas.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3277,
+						"buffer_size": 609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2378,
-								2378
+								483,
+								483
 							]
 						],
 						"settings":
@@ -428,7 +429,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
