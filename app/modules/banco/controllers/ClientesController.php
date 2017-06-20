@@ -80,6 +80,7 @@ class ClientesController extends RESTController
             ->setNumeroConta(isset($put['numeroConta']) ? $put['numeroConta'] : $cliente->getNumeroConta())
             ->setTipoConta(isset($put['tipoConta']) ? $put['tipoConta'] : $cliente->getTipoConta());
 
+
             $cliente->saveDB();
 
             return $cliente;

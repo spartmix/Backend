@@ -63,6 +63,102 @@ class ContasController extends RESTController
         }
     }
 
+    public function depositar($idConta)
+    {
+        try {
+            $conta = (new Contas())->findFirst(
+                    [
+                        'conditions' => "idConta = '$idConta'",
+                        'columns' => $this->partialFields
+                    ]
+                );
+
+            if (false === $conta) {
+                throw new Exception("Error Processing Request", 1);
+            }
+
+            $conta->setSaldoConta($this->di->get('request')->getPost('depositarValor') + $conta->getSaldoConta());
+
+            $conta->saveDB();
+
+            return $conta;
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage(), $e->getCode());
+        }
+    }
+
+    public function sacar($idConta)
+    {
+        try {
+            $conta = (new Contas())->findFirst(
+                    [
+                        'conditions' => "idConta = '$idConta'",
+                        'columns' => $this->partialFields
+                    ]
+                );
+
+            if (false === $conta) {
+                throw new Exception("Error Processing Request", 1);
+            }
+            if ($conta->getSaldoConta() < $this->di->get('request')->getPost('sacarValor')) {
+                throw new Exception("Saldo insuficiente", 3);
+            }
+            if ($conta->getLimiteConta() < $this->di->get('request')->getPost('sacarValor')) {
+                throw new Exception("Limite insuficiente", 4);
+            }
+            $conta->setSaldoConta($conta->getSaldoConta() - $this->di->get('request')->getPost('sacarValor'));
+
+            $conta->saveDB();
+
+            return $conta;
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage(), $e->getCode());
+        }
+    }
+
+
+    public function transferir()
+    {
+        try {
+            $contaAtual = (new Contas())->findFirst(
+                    [
+                        'conditions' => "idConta = '$this->di->get('request')->getPost('idConta')'",
+                        'columns' => $this->partialFields
+                    ]
+                );
+
+            if (false === $conta) {
+                throw new Exception("Error Processing Request", 1);
+            }
+
+            $contaDestino = (new Contas())->findFirst(
+                    [
+                        'conditions' => "idConta = '$this->di->get('request')->getPost('idConta')'",
+                        'columns' => $this->partialFields
+                    ]
+                );
+
+            if (false === $conta) {
+                throw new Exception("Error Processing Request", 1);
+            }
+
+            $contaAtual->getcNumeroConta();
+            $contaAtual->setSaldoConta($contaAtual->getSaldoConta() - $this->di->get('request')->getPost('valorTransferencia'));
+
+            $contaDestino->getcNumeroConta();
+            $contaDestino->setSaldoConta($contaDestino->getSaldoConta() + $this->di->get('request')->getPost('valorTransferencia'));
+
+            $contaAtual->saveDB();
+            $contaDestino->saveDB();
+
+            return $contaAtual;
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage(), $e->getCode());
+        }
+    }
+
+
+
     public function addConta()
     {
         try {
@@ -77,6 +173,8 @@ class ContasController extends RESTController
             throw new \Exception($e->getMessage(), $e->getCode());
         }
     }
+
+
 
     public function deleteConta($idConta)
     {

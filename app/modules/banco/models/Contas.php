@@ -63,4 +63,9 @@ class Contas extends \App\Models\BaseModel
         $this->limiteConta = $setLimiteConta;
         return $this;
     }
+
+    public function depositar($valor)
+    {
+        $this->setSaldoConta($this->getSaldoConta() + $valor);
+    }
 }
