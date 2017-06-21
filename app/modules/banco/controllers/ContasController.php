@@ -122,36 +122,40 @@ class ContasController extends RESTController
         try {
             $contaAtual = (new Contas())->findFirst(
                     [
-                        'conditions' => "idConta = '$this->di->get('request')->getPost('idConta')'",
+                        'conditions' => "cNumeroConta = '".$this->di->get('request')->getPost('contaAtual')."'",
                         'columns' => $this->partialFields
                     ]
                 );
 
-            if (false === $conta) {
+            if (false === $contaAtual) {
                 throw new Exception("Error Processing Request", 1);
             }
 
             $contaDestino = (new Contas())->findFirst(
                     [
-                        'conditions' => "idConta = '$this->di->get('request')->getPost('idConta')'",
+                        'conditions' => "cNumeroConta = '".$this->di->get('request')->getPost('contaDestino')."'",
                         'columns' => $this->partialFields
                     ]
                 );
 
-            if (false === $conta) {
+            if (false === $contaDestino) {
                 throw new Exception("Error Processing Request", 1);
             }
 
-            $contaAtual->getcNumeroConta();
-            $contaAtual->setSaldoConta($contaAtual->getSaldoConta() - $this->di->get('request')->getPost('valorTransferencia'));
+            if ($contaAtual->getSaldoConta() < $this->di->get('request')->getPost('valorTransferencia')) {
+                throw new Exception("Saldo insuficiente", 3);
+            }
+            if ($contaAtual->getLimiteConta() < $this->di->get('request')->getPost('valorTransferencia')) {
+                throw new Exception("Limite insuficiente", 4);
+            }
 
-            $contaDestino->getcNumeroConta();
+            $contaAtual->setSaldoConta($contaAtual->getSaldoConta() - $this->di->get('request')->getPost('valorTransferencia'));
             $contaDestino->setSaldoConta($contaDestino->getSaldoConta() + $this->di->get('request')->getPost('valorTransferencia'));
 
             $contaAtual->saveDB();
             $contaDestino->saveDB();
 
-            return $contaAtual;
+            return ['Atual'=> $contaAtual, 'Destino'=> $contaDestino];
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage(), $e->getCode());
         }

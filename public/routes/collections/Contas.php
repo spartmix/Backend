@@ -14,7 +14,7 @@ return call_user_func(
         $clienteCollection->post('/', 'addConta');
         $clienteCollection->post('/depositar/{id:\d+}', 'depositar');
         $clienteCollection->post('/sacar/{id:\d+}', 'sacar');
-        $clienteCollection->post('/transferir/', 'transferir');
+        $clienteCollection->post('/transferir', 'transferir');
 
         $clienteCollection->put('/{id:\d+}', 'editConta');
 
