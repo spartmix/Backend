@@ -101,10 +101,9 @@ class ContasController extends RESTController
                 throw new Exception("Error Processing Request", 1);
             }
             if ($conta->getSaldoConta() < $this->di->get('request')->getPost('sacarValor')) {
-                throw new Exception("Saldo insuficiente", 3);
-            }
-            if ($conta->getLimiteConta() < $this->di->get('request')->getPost('sacarValor')) {
-                throw new Exception("Limite insuficiente", 4);
+                if ($conta->getLimiteConta() < $this->di->get('request')->getPost('sacarValor')) {
+                    throw new Exception("Saldo insuficiente", 4);
+                }
             }
             $conta->setSaldoConta($conta->getSaldoConta() - $this->di->get('request')->getPost('sacarValor'));
 
@@ -143,10 +142,9 @@ class ContasController extends RESTController
             }
 
             if ($contaAtual->getSaldoConta() < $this->di->get('request')->getPost('valorTransferencia')) {
-                throw new Exception("Saldo insuficiente", 3);
-            }
-            if ($contaAtual->getLimiteConta() < $this->di->get('request')->getPost('valorTransferencia')) {
-                throw new Exception("Limite insuficiente", 4);
+                if ($contaAtual->getLimiteConta() < $this->di->get('request')->getPost('valorTransferencia')) {
+                    throw new Exception("Saldo insuficiente", 3);
+                }
             }
 
             $contaAtual->setSaldoConta($contaAtual->getSaldoConta() - $this->di->get('request')->getPost('valorTransferencia'));
